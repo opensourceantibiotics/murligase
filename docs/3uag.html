@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="generator" content="BBEdit 12.5" />
+	<script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script> 
+</head>
+<body>
+
+MurD Liagse from E Coli PDB code <a href="https://www.rcsb.org/structure/3uag">3UAG</a> "Determination of the MurD mechanism through crystallographic analysis of enzyme complexes" <a href="http://dx.doi.org/10.1006/jmbi.1999.2800">DOI</a>. Structure displayed using <a href="http://3dmol.csb.pitt.edu">3Dmol.js</a>.
+
+	<script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script> 
+<div id="my-colorscheme-test" style="width: 700px; height: 700px; position: relative;"></div>
+<button id="toggle-surface">Hide surface</button>
+
+<script>
+    var viewer = $3Dmol.createViewer($("#my-colorscheme-test"));
+    viewer.setBackgroundColor(0xffffffff);
+    $3Dmol.download('pdb:3uag', viewer, {} , function(m) {
+       var protein = {resn: ["EPE", "ADP", "UMA", "MN"], invert: 1}
+       viewer.setStyle(protein, {'cartoon':{colorscheme:{prop:'ss',map:$3Dmol.ssColors.Jmol}}});
+       viewer.addSurface($3Dmol.SurfaceType.VDW, {opacity: 0.8, color: "white"}, protein, protein);
+       //viewer.setStyle({hetflag: true}, {stick: {color: 'red'}})
+
+       viewer.setStyle({resn: 'EPE'}, {stick: {color: 'grey'}})
+       viewer.setStyle({resn: 'ADP'}, {stick: {color: 'blue'}})
+       viewer.setStyle({resn: 'UMA'}, {stick: {color: 'green'}})
+       viewer.setStyle({resn: 'MN'}, {sphere: {color: 'yellow'}})
+       viewer.zoomTo();
+		viewer.addLabel("ADP", {position: {x:30.0, y:-10.0, z:20.0}, backgroundColor: 0x808080, backgroundOpacity:0.8});
+       viewer.addLabel("UMA", {position: {x:40.0, y:5.0, z:15.0}, backgroundColor: 0x808080, backgroundOpacity:0.8});
+       a.color = $3Dmol.CC.color(0xeeeeee);
+       viewer.render();
+    });
+    
+    // Keep track of whether the surface is shown
+    var surfaceOn = true;
+    
+    // Event listener for when the button is clicked
+    $('#toggle-surface').on('click', function() {
+      if (surfaceOn) {
+        // Remove surface(s) and change button text
+        viewer.removeAllSurfaces();
+        $(this).text('Show surface');
+        surfaceOn = false;
+      } else {
+        // Add the surface and change button text
+        var protein = {resn: ["EPE", "ADP", "UMA", "MN"], invert: 1}
+        viewer.addSurface($3Dmol.SurfaceType.VDW, {opacity: 0.9, color: "white"}, protein, protein);
+        $(this).text('Hide surface');
+        surfaceOn = true;
+      }
+    });
+
+    
+</script>
+
+
+    
+
+
+
+<h4>Mouse Controls</h4><table>
+<thead>
+<tr>
+<th>Movement</th>
+<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th style="text-align:left">Mouse Input</th>
+<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Touch Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rotation</td>
+<td></td>
+<td style="text-align:left">Primary Mouse Button</td>
+<td></td>
+<td>Single touch</td>
+</tr>
+<tr>
+<td>Translation</td>
+<td></td>
+<td style="text-align:left">Middle Mouse Button or Ctrl+Primary</td>
+<td></td>
+<td>Triple touch</td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td></td>
+<td style="text-align:left">Scroll Wheel or Second Mouse Button or Shift+Primary</td>
+<td></td>
+<td>Pinch (double touch)</td>
+</tr>
+<tr>
+<td>Slab</td>
+<td></td>
+<td style="text-align:left">Ctrl+Second</td>
+<td></td>
+<td>Not Available</td>
+</tr>
+</tbody>
+</table>
+<br>
+<a href="https://github.com/opensourceantibiotics/https://github.com/opensourceantibiotics/murligase/wiki/Overview">Back to Overview</a>
+</body>
+</html>
