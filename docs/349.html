@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="generator" content="BBEdit 12.5" />
+	<script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script> 
+</head>
+<body>
+
+Fragment 349 bound to MurD Ligase. Structure displayed using <a href="http://3dmol.csb.pitt.edu">3Dmol.js</a>.
+
+	<script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script> 
+<div id="my-colorscheme-test" style="width: 800px; height: 800px; position: relative;"></div>
+<button id="toggle-surface">Hide surface</button>
+
+<script>
+    var viewer = $3Dmol.createViewer($("#my-colorscheme-test"));
+    viewer.setBackgroundColor(0xffffffff);
+      let pdbUri = '349.pdb';
+  jQuery.ajax( pdbUri, { 
+    success: function(data) {
+      viewer.addModel( data, "pdb" );  
+      var protein = {resn: ["EPE", "LIG", "SO4", "CL", "HOH"], invert: 1}                     /* load data */
+      viewer.setStyle(protein, {'cartoon':{colorscheme:{prop:'ss',map:$3Dmol.ssColors.Jmol}}});
+      viewer.addSurface($3Dmol.SurfaceType.VDW, {opacity: 0.9, color: "white"}, protein, protein);
+      viewer.setStyle({resn: 'LIG'}, {stick: {color: 'green'}})
+       viewer.setStyle({resi: '143'}, {stick: {color: 'blue'}})
+      viewer.setStyle({resi: '147'}, {stick: {color: 'blue'}})
+      viewer.setStyle({resi: '330'}, {stick: {color: 'blue'}})
+      viewer.addResLabels({chain:'A', resi: '147'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+      viewer.addResLabels({chain:'A', resi: '143'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+      viewer.addResLabels({chain:'A', resi: '330'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+      viewer.addResLabels({resn: 'LIG'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+    viewer.setStyle({chain:'E', resi: '355'}, {sphere: {radius: 0.5, colour: 'red'}})
+    viewer.addResLabels({chain:'E', resi: '355'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+      viewer.zoomTo();                                      /* set camera */
+      viewer.render();                                      /* render scene */
+      viewer.zoom(2.0, 1000);                               /* slight zoom */
+    },
+    error: function(hdr, status, err) {
+      console.error( "Failed to load PDB " + pdbUri + ": " + err );
+    },
+  });
+
+    
+    // Keep track of whether the surface is shown
+    var surfaceOn = true;
+    
+    // Event listener for when the button is clicked
+    $('#toggle-surface').on('click', function() {
+      if (surfaceOn) {
+        // Remove surface(s) and change button text
+        viewer.removeAllSurfaces();
+        $(this).text('Show surface');
+        surfaceOn = false;
+      } else {
+        // Add the surface and change button text
+        var protein = {resn: ["EPE", "LIG", "SO4", "CL"], invert: 1}
+        viewer.addSurface($3Dmol.SurfaceType.VDW, {opacity: 0.9, color: "white"}, protein, protein);
+        $(this).text('Hide surface');
+        surfaceOn = true;
+      }
+    });
+
+    
+</script>
+
+
+
+<h4>Mouse Controls</h4><table>
+<thead>
+<tr>
+<th>Movement</th>
+<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th style="text-align:left">Mouse Input</th>
+<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Touch Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rotation</td>
+<td></td>
+<td style="text-align:left">Primary Mouse Button</td>
+<td></td>
+<td>Single touch</td>
+</tr>
+<tr>
+<td>Translation</td>
+<td></td>
+<td style="text-align:left">Middle Mouse Button or Ctrl+Primary</td>
+<td></td>
+<td>Triple touch</td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td></td>
+<td style="text-align:left">Scroll Wheel or Second Mouse Button or Shift+Primary</td>
+<td></td>
+<td>Pinch (double touch)</td>
+</tr>
+<tr>
+<td>Slab</td>
+<td></td>
+<td style="text-align:left">Ctrl+Second</td>
+<td></td>
+<td>Not Available</td>
+</tr>
+</tbody>
+</table>
+<br>
+<a href="Need to add link">Back to Overview</a>
+</body>
+</html>
