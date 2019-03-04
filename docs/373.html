@@ -7,11 +7,12 @@
 </head>
 <body>
 
-Fragment 349 bound to MurD Ligase. Structure displayed using <a href="http://3dmol.csb.pitt.edu">3Dmol.js</a>.
+Fragment 373 bound to MurD Ligase. Structure displayed using <a href="http://3dmol.csb.pitt.edu">3Dmol.js</a>.
 
 	<script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script> 
 <div id="my-colorscheme-test" style="width: 800px; height: 800px; position: relative;"></div>
 <button id="toggle-surface">Hide surface</button>
+<button id="keyresidues">Display Labels</button>
 
 <script>
     var viewer = $3Dmol.createViewer($("#my-colorscheme-test"));
@@ -28,13 +29,7 @@ Fragment 349 bound to MurD Ligase. Structure displayed using <a href="http://3dm
       viewer.setStyle({resi: '147'}, {stick: {colorscheme: 'blueCarbon'}})
       viewer.setStyle({resi: '311'}, {stick: {colorscheme: 'blueCarbon'}})
       viewer.setStyle({resi: '330'}, {stick: {color: 'blue'}})
-      viewer.addResLabels({chain:'A', resi: '132'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
-      viewer.addResLabels({chain:'A', resi: '311'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
-      viewer.addResLabels({chain:'A', resi: '147'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
-      viewer.addResLabels({chain:'A', resi: '330'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
-      viewer.addResLabels({resn: 'LIG'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
-      viewer.setStyle({chain:'E', resi: '341'}, {sphere: {radius: 0.6, colour: 'red'}})
-      viewer.addResLabels({chain:'E', resi: '341'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+    
       viewer.zoomTo();                                      /* set camera */
       viewer.render();                                      /* render scene */
       viewer.zoom(2.0, 1000);                               /* slight zoom */
@@ -64,10 +59,29 @@ Fragment 349 bound to MurD Ligase. Structure displayed using <a href="http://3dm
       }
     });
 
+//toggle labels
+var labelsOff = true;
+	$('#keyresidues').on('click', function() {
+	if (labelsOff) {
+  // Add labels
+    viewer.addResLabels({chain:'A', resi: '132'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+    viewer.addResLabels({chain:'A', resi: '311'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+      viewer.addResLabels({chain:'A', resi: '147'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+      viewer.addResLabels({chain:'A', resi: '330'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+      viewer.addResLabels({resn: 'LIG'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+      viewer.setStyle({chain:'E', resi: '341'}, {sphere: {radius: 0.6, colour: 'red'}})
+     viewer.addResLabels({chain:'E', resi: '341'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+     labelsOff = false;
+       $(this).text('Hide Labels');
+     } else {
+     //labels off
+    viewer.removeAllLabels();
+     labelsOff = true;
+       $(this).text('Display Labels');
+    }
+    });
     
 </script>
-
-
 
 <h4>Mouse Controls</h4><table>
 <thead>
