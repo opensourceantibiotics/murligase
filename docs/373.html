@@ -29,6 +29,7 @@ Fragment 373 bound to MurD Ligase. Structure displayed using <a href="http://3dm
       viewer.setStyle({resi: '147'}, {stick: {colorscheme: 'blueCarbon'}})
       viewer.setStyle({resi: '311'}, {stick: {colorscheme: 'blueCarbon'}})
       viewer.setStyle({resi: '330'}, {stick: {color: 'blue'}})
+      viewer.setStyle({chain:'E', resi: '341'}, {sphere: {radius: 0.6, colour: 'red'}})
     
       viewer.zoomTo();                                      /* set camera */
       viewer.render();                                      /* render scene */
@@ -52,7 +53,7 @@ Fragment 373 bound to MurD Ligase. Structure displayed using <a href="http://3dm
         surfaceOn = false;
       } else {
         // Add the surface and change button text
-        var protein = {resn: ["EPE", "LIG", "SO4", "CL"], invert: 1}
+        var protein = {resn: ["EPE", "LIG", "SO4", "CL", "HOH"], invert: 1}
         viewer.addSurface($3Dmol.SurfaceType.VDW, {opacity: 0.9, color: "white"}, protein, protein);
         $(this).text('Hide surface');
         surfaceOn = true;
@@ -69,7 +70,6 @@ var labelsOff = true;
       viewer.addResLabels({chain:'A', resi: '147'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
       viewer.addResLabels({chain:'A', resi: '330'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
       viewer.addResLabels({resn: 'LIG'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
-      viewer.setStyle({chain:'E', resi: '341'}, {sphere: {radius: 0.6, colour: 'red'}})
      viewer.addResLabels({chain:'E', resi: '341'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
      labelsOff = false;
        $(this).text('Hide Labels');
