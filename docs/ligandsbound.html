@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Docking Example</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+       <script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script> 
+        <style>
+        	* {margin:0; padding:0}
+        </style>
+
+        <script>
+            var glviewer = null;
+
+            $(document).ready(function() {
+                
+                try {
+                    
+                    glviewer = $3Dmol.createViewer("gldiv", {defaultcolors: $3Dmol.rasmolElementColors});                    
+                    glviewer.setBackgroundColor(0xffffff);
+                    
+                    $.get('349overlay.pdb', function(data) {
+                    	var rec = glviewer.addModel(data, 'pdb');
+                    	var protein = {resn: ["EPE", "LIG", "SO4", "DMS", "HOH", "CL"], invert: 1} 
+                    	glviewer.setStyle(protein, {'cartoon':{colorscheme:{prop:'ss',map:$3Dmol.ssColors.Jmol}}});
+                    	glviewer.setStyle({resi: '132'}, {stick: {colorscheme: 'blueCarbon'}})
+      					glviewer.setStyle({resi: '147'}, {stick: {colorscheme: 'blueCarbon'}})
+      					glviewer.setStyle({resi: '311'}, {stick: {colorscheme: 'blueCarbon'}})
+      					glviewer.setStyle({resi: '330'}, {stick: {colorscheme: 'blueCarbon'}})
+      					glviewer.addSurface($3Dmol.SurfaceType.VDW, {opacity: 0.9, color: "white"}, protein, protein);
+      					glviewer.addResLabels({chain:'A', resi: '132'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+    					glviewer.addResLabels({chain:'A', resi: '311'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+      					glviewer.addResLabels({chain:'A', resi: '147'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+      					glviewer.addResLabels({chain:'A', resi: '330'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+                    	
+                    	$.get('ADPonly.pdb', function(data) {
+                    		var lig = glviewer.addModel(data,'pdb');
+                    		lig.setStyle({}, {stick: {radius:0.15}});
+                    		glviewer.addResLabels({chain:'A', resn: 'ADP'}, {font: 'Arial', fontSize:12, fontColor:'white',backgroundOpacity:0.4, showBackground:true});
+                    		$.get('ligandsOnly.sdf', function(data) {
+                    			var sdfs = data.split('$$$$\n');
+								var sdfmodels = [];
+								for(var i = 0; i < sdfs.length; i++) {
+									if(sdfs[i].length > 0) {
+										var m = glviewer.addModel(sdfs[i],"sdf");
+										m.setStyle({},{stick:{colorscheme:"greenCarbon"}});
+										m.hide();
+										sdfmodels.push(m);
+									}
+								}
+					
+								var currmol = 0;
+								var display = function() {
+									sdfmodels[currmol].hide();
+									currmol = (currmol+1) % sdfmodels.length;
+									sdfmodels[currmol].show();
+									glviewer.render();
+								};
+							
+							display();
+                    		setInterval(display, 500);
+                    		
+                    		//glviewer.addSurface($3Dmol.SurfaceType.MS,{colorscheme: 'whiteCarbon',opacity:0.95},{protein, protein);
+                    		//glviewer.addSurface($3Dmol.SurfaceType.VDW, {opacity: 0.9, color: "white"}, protein, protein);
+							glviewer.zoomTo();
+							glviewer.render();                                      /* render scene */
+     						glviewer.zoom(2.0, 1000);    
+     						
+    // Keep track of whether the surface is shown
+    var surfaceOn = true;
+    
+    // Event listener for when the button is clicked
+    $('#toggle-surface').on('click', function() {
+      if (surfaceOn) {
+        // Remove surface(s) and change button text
+       glviewer.removeAllSurfaces();
+        $(this).text('Show surface');
+        surfaceOn = false;
+      } else {
+        // Add the surface and change button text
+        var protein = {resn: ["EPE", "LIG", "SO4", "DMS", "HOH", "CL", currmol], invert: 1} 
+        var protein = ({chain:'A', resi: '1-449'});
+        glviewer.addSurface($3Dmol.SurfaceType.VDW, {opacity: 0.9, color: "white"}, protein, protein);
+        $(this).text('Hide surface');
+        surfaceOn = true;
+        
+}})})})})}
+
+                
+                catch (e) {
+                    console.error("Could not instantiate viewer from supplied url: '" + e + "'");
+                }
+
+                
+            });
+        </script>
+    </head>    
+    <body>
+    <div id="gldiv" style="width: 800px; height: 800px; position: relative;"></div>     
+		<button id="toggle-surface">Hide surface</button>
+    </body>    
+</html>

@@ -1,0 +1,82 @@
+HEADER    LIGASE                                                      
+REMARK  99                                                                      
+REMARK  99 MOE v2018.01 (Chemical Computing Group ULC) Wed Mar 13 20:29:40 2019 
+HETATM    1  PB  ADP A 451       5.798  74.326   4.929  1.00 21.62           P1+
+HETATM    2  O1B ADP A 451       6.155  75.772   4.743  1.00 26.34           O1-
+HETATM    3  O2B ADP A 451       4.386  73.947   4.607  1.00 20.71           O1-
+HETATM    4  O3B ADP A 451       6.779  73.390   4.239  1.00 20.32           O1-
+HETATM    5  PA  ADP A 451       7.104  73.780   7.524  1.00 20.41           P1+
+HETATM    6  O1A ADP A 451       7.144  72.395   8.006  1.00 19.04           O1-
+HETATM    7  O2A ADP A 451       8.337  74.494   6.939  1.00 23.71           O1-
+HETATM    8  O3A ADP A 451       5.903  73.950   6.467  1.00 22.12           O  
+HETATM    9  O5' ADP A 451       6.548  74.761   8.709  1.00 21.53           O  
+HETATM   10  C5' ADP A 451       6.306  76.158   8.397  1.00 21.95           C  
+HETATM   11  C4' ADP A 451       5.691  76.907   9.608  1.00 18.65           C  
+HETATM   12  O4' ADP A 451       4.458  76.260   9.987  1.00 20.81           O  
+HETATM   13  C3' ADP A 451       6.581  76.816  10.876  1.00 19.47           C  
+HETATM   14  O3' ADP A 451       6.294  77.951  11.709  1.00 23.83           O  
+HETATM   15  C2' ADP A 451       5.992  75.589  11.574  1.00 22.15           C  
+HETATM   16  O2' ADP A 451       6.239  75.503  12.978  1.00 26.68           O  
+HETATM   17  C1' ADP A 451       4.492  75.742  11.325  1.00 23.13           C  
+HETATM   18  N9  ADP A 451       3.780  74.417  11.266  1.00 26.43           N  
+HETATM   19  C8  ADP A 451       4.349  73.188  11.211  1.00 23.19           C  
+HETATM   20  N7  ADP A 451       3.431  72.227  11.109  1.00 24.51           N  
+HETATM   21  C5  ADP A 451       2.245  72.864  11.143  1.00 24.25           C  
+HETATM   22  C6  ADP A 451       0.849  72.446  11.082  1.00 21.99           C  
+HETATM   23  N6  ADP A 451       0.576  71.130  10.973  1.00 22.94           N  
+HETATM   24  N1  ADP A 451      -0.082  73.424  11.139  1.00 23.57           N  
+HETATM   25  C2  ADP A 451       0.197  74.738  11.199  1.00 23.08           C  
+HETATM   26  N3  ADP A 451       1.456  75.199  11.266  1.00 25.61           N  
+HETATM   27  C4  ADP A 451       2.479  74.303  11.223  1.00 25.50           C  
+HETATM   28 H5'1 ADP A 451       5.617  76.220   7.554  1.00 21.95           H  
+HETATM   29 H5'2 ADP A 451       7.251  76.631   8.129  1.00 21.95           H  
+HETATM   30  H4' ADP A 451       5.570  77.944   9.295  1.00 18.65           H  
+HETATM   31  H3' ADP A 451       7.651  76.773  10.674  1.00 19.47           H  
+HETATM   32 HO3' ADP A 451       6.784  77.842  12.527  1.00 23.83           H  
+HETATM   33  H2' ADP A 451       6.449  74.681  11.182  1.00 22.15           H  
+HETATM   34 HO2' ADP A 451       6.758  76.270  13.229  1.00 26.68           H  
+HETATM   35  H1' ADP A 451       4.023  76.340  12.106  1.00 23.13           H  
+HETATM   36  H8  ADP A 451       5.414  73.010  11.246  1.00 23.19           H  
+HETATM   37 HN61 ADP A 451      -0.383  70.815  10.928  1.00 22.94           H  
+HETATM   38 HN62 ADP A 451       1.330  70.459  10.936  1.00 22.94           H  
+HETATM   39  H2  ADP A 451      -0.619  75.446  11.193  1.00 23.08           H  
+CONECT    1    2    3    4    8
+CONECT    2    1
+CONECT    3    1
+CONECT    4    1
+CONECT    5    6    7    8    9
+CONECT    6    5
+CONECT    7    5
+CONECT    8    1    5
+CONECT    9    5   10
+CONECT   10    9   28   29   11
+CONECT   11   10   30   12   13
+CONECT   12   11   17
+CONECT   13   11   31   14   15
+CONECT   14   13   32
+CONECT   15   13   33   16   17
+CONECT   16   15   34
+CONECT   17   12   15   35   18
+CONECT   18   17   19   27
+CONECT   19   18   36   20   20
+CONECT   20   19   19   21
+CONECT   21   20   22   27   27
+CONECT   22   21   23   24   24
+CONECT   23   22   37   38
+CONECT   24   22   22   25
+CONECT   25   24   39   26   26
+CONECT   26   25   25   27
+CONECT   27   18   21   21   26
+CONECT   28   10
+CONECT   29   10
+CONECT   30   11
+CONECT   31   13
+CONECT   32   14
+CONECT   33   15
+CONECT   34   16
+CONECT   35   17
+CONECT   36   19
+CONECT   37   23
+CONECT   38   23
+CONECT   39   25
+END
