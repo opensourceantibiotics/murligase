@@ -52,7 +52,7 @@ Fragment 349 bound to MurD Ligase. Structure displayed using <a href="http://3dm
         surfaceOn = false;
       } else {
         // Add the surface and change button text
-        var protein = {resn: ["EDO", "LIG"], invert: 1}
+        var protein = {resn: ["EDO", "LIG", "HOH"], invert: 1}
         viewer.addSurface($3Dmol.SurfaceType.VDW, {opacity: 0.9, color: "white"}, protein, protein);
         $(this).text('Hide surface');
         surfaceOn = true;
