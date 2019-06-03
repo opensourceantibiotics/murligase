@@ -270,7 +270,7 @@ function setResidueOptions (chain) {
 
 var pdbs = [
 	['', 'Choose structure...'],
-	['/pdbs_forNGL/MurD/3uag.pdb', '3uag'],
+	['pdbs_forNGL/MurD/3uag.pdb', '3uag'],
 	['/pdbs_forNGL/MurD/349.pdb', '349'],
 	['/pdbs_forNGL/MurD/373.pdb', '373'],
 	['/pdbs_forNGL/MurD/374.pdb', '374'],
