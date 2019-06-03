@@ -1,0 +1,71 @@
+<!doctype html>
+<html style="width:100%; height:100%;">
+<head>
+	<script src="ngl-v2.0.0-dev.35.js"></script>
+</head>
+<body style="width:100%; height:100%; margin: 0;">
+	<div id="viewport" style="width:100%; height:100%;">
+	</div>
+	
+	<script>
+	// Setup to load data from rawgit
+NGL.DatasourceRegistry.add(
+    "data", new NGL.StaticDatasource( "//cdn.rawgit.com/arose/ngl/v2.0.0-dev.32/data/" )
+);
+
+// Create NGL Stage object
+var stage = new NGL.Stage( "viewport" );
+
+// Handle window resizing
+window.addEventListener( "resize", function( event ){
+    stage.handleResize();
+}, false );
+
+
+// Code for example: representation/molecularsurface
+
+stage.loadFile("rcsb://3uag.pdb").then(function (o) {
+   o.addRepresentation("cartoon")
+  o.addRepresentation("ball+stick")
+  o.autoView()
+
+
+function addElement (el) {
+  Object.assign(el.style, {
+    position: "absolute",
+    zIndex: 10
+  })
+  stage.viewer.container.appendChild(el)
+}
+
+function createElement (name, properties, style) {
+  var el = document.createElement(name)
+  Object.assign(el, properties)
+  Object.assign(el.style, style)
+  return el
+}
+ var surface = o.addRepresentation("surface", {
+    surfaceType: "ms",
+    smooth: 2,
+    probeRadius: 1.4,
+    scaleFactor: 2.0,
+    flatShaded: false,
+    opacity: 0.7,
+    lowResolution: false,
+    colorScheme: "element"
+  })
+var surfaceButton = createElement("input", {
+    type: "button",
+    value: "toggle surface"
+  }, { top: "36px", left: "12px" })
+  surfaceButton.onclick = function (e) {
+    surface.toggleVisibility()
+  }
+  addElement(surfaceButton)
+})
+
+
+
+</script>
+</body>
+</html>
