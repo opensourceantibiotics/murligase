@@ -267,14 +267,14 @@ function setResidueOptions (chain) {
     }))
   })
 }
-
+//PDB structures
 var pdbs = [
 	['', 'Choose structure...'],
 	['https://opensourceantibiotics.github.io/murligase/pdbs_forNGL/MurD/3uag.pdb', '3uag'],
-	['/pdbs_forNGL/MurD/349.pdb', '349'],
-	['/pdbs_forNGL/MurD/373.pdb', '373'],
-	['/pdbs_forNGL/MurD/374.pdb', '374'],
-	['/pdbs_forNGL/MurD/378.pdb', '378'],
+	['https://opensourceantibiotics.github.io/murligase/pdbs_forNGL/MurD/349.pdb', '349'],
+	['https://opensourceantibiotics.github.io/murligase/pdbs_forNGL/MurD/373.pdb', '373'],
+	['https://opensourceantibiotics.github.io/murligase/pdbs_forNGL/MurD/374.pdb', '374'],
+	['https://opensourceantibiotics.github.io/murligase/pdbs_forNGL/MurD/378.pdb', '378'],
 	//['/pdbs/MurD/AllOverlaid.pdb', 'AllOverlaid'],
 	// ['<url>', '<name>']
 ];
