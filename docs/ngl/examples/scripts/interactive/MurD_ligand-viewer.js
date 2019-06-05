@@ -113,7 +113,7 @@ stage.signals.clicked.add(function (pickingProxy) {
   }
 })
 
-var ligandSele = '( not polymer or not ( protein or nucleic ) ) and not ( water or ACE or NH2 )'
+var ligandSele = '(not ( water or ACE or NH2 )'
 
 var pocketRadius = 0
 var pocketRadiusClipFactor = 1
