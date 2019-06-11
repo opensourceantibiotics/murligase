@@ -127,7 +127,7 @@ var sidechainAttached = false
 function loadStructure (input) {
   struc = undefined
   stage.setFocus(0)
-  stage.removeAllComponents()
+  //stage.removeAllComponents()
   ligandSelect.innerHTML = ''
   clipNearRange.value = 0
   clipRadiusRange.value = 100
