@@ -1,7 +1,7 @@
 # MurLigase
 This website contains everything to do with the Mur Ligase Project, which is an open source drug discovery project. The focus is the discovery and development of new antibiotics, through inhibition of the Mur ligase enzymes.  
 
-Background and where we're up to, click on the [Wiki tab above](https://github.com/opensourceantibiotics/murligase/wiki).
+Background and where we're up to, click on the [Wiki tab above](https://github.com/opensourceantibiotics/murligase/wiki).  
 To Do List: click on the [Issues tab](https://github.com/opensourceantibiotics/murligase/issues), above.
 
 Some intro reading: [blog post on Practical Fragments](http://practicalfragments.blogspot.com/2019/04/help-develop-new-antibiotics-from.html).
