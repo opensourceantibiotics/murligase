@@ -7,3 +7,5 @@ To Do List: click on the [Issues tab](https://github.com/opensourceantibiotics/m
 Some intro reading: [blog post on Practical Fragments](http://practicalfragments.blogspot.com/2019/04/help-develop-new-antibiotics-from.html).
 
 This is an "open source" project, meaning everything is shared and you can be involved as a full participant. For a brief outline of what this means, take a look at [this "about" page over at Open Source Malaria](https://github.com/OpenSourceMalaria/About-StartHere-FAQ) or read [this paper describing some of the general rules](https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cmdc.201900565).
+
+Unless otherwise stated, the licence for this project is CC-BY-4.0.
