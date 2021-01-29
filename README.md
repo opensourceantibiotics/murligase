@@ -1,6 +1,11 @@
 # MurLigase
-This repository contains everything to do with the Mur Ligase Project, which is an open source drug discovery project. The focus is the discovery and development of new antibiotics, specifically inhibitors of the Mur ligase enzymes.  
+This website contains everything to do with the Mur Ligase Project, which is an open source drug discovery project. The focus is the discovery and development of new antibiotics, through inhibition of the Mur ligase enzymes.  
 
-To learn more about the background to the project and where we're up to, click on the Wiki tab above https://github.com/opensourceantibiotics/murligase/wiki . To learn about the current needs of the project and how to get involved, click on the Issues tab, also above. [There is a nice blog post on Practical Fragments about the start of the Mur Ligase project by Dan Erlanson](http://practicalfragments.blogspot.com/2019/04/help-develop-new-antibiotics-from.html).
+Background and where we're up to, click on the [Wiki tab above](https://github.com/opensourceantibiotics/murligase/wiki).  
+To Do List: click on the [Issues tab](https://github.com/opensourceantibiotics/murligase/issues), above.
 
-As an open source project you can be involved as a full participant. For a brief outline of what this means, take a look at [this "about" page over at Open Source Malaria](https://github.com/OpenSourceMalaria/About-StartHere-FAQ).
+Some intro reading: [blog post on Practical Fragments](http://practicalfragments.blogspot.com/2019/04/help-develop-new-antibiotics-from.html).
+
+This is an "open source" project, meaning everything is shared and you can be involved as a full participant. For a brief outline of what this means, take a look at [this "about" page over at Open Source Malaria](https://github.com/OpenSourceMalaria/About-StartHere-FAQ) or read [this paper describing some of the general rules](https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cmdc.201900565).
+
+Unless otherwise stated, the licence for this project is CC-BY-4.0.
