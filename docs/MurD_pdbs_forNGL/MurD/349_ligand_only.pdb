@@ -1,0 +1,25 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15000\viewh14240\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 HETATM 3832 Cl1  LIG G   1      32.316 -41.258  -0.471  0.62 32.38          CL\
+HETATM 3833  C1  LIG G   1      30.263 -41.918   5.718  0.62 19.95           C\
+HETATM 3834  N1  LIG G   1      31.032 -40.940   4.954  0.62 16.91           N\
+HETATM 3835  C2  LIG G   1      31.017 -41.221   3.535  0.62 15.49           C\
+HETATM 3836  C3  LIG G   1      31.823 -40.224   2.737  0.62 13.14           C\
+HETATM 3837  N2  LIG G   1      31.570 -38.825   3.106  0.62 11.02           N\
+HETATM 3838  C4  LIG G   1      31.429 -38.615   4.552  0.62 14.69           C\
+HETATM 3839  C5  LIG G   1      30.497 -39.615   5.165  0.62 17.26           C\
+HETATM 3840  C6  LIG G   1      31.769 -37.782   2.235  0.62  7.76           C\
+HETATM 3841  C7  LIG G   1      31.662 -36.463   2.683  0.62  6.95           C\
+HETATM 3842  C8  LIG G   1      31.885 -35.410   1.856  0.62  6.33           C\
+HETATM 3843  C9  LIG G   1      32.261 -35.603   0.524  0.62  6.56           C\
+HETATM 3844  C10 LIG G   1      32.520 -34.497  -0.342  0.62  5.89           C\
+HETATM 3845  N3  LIG G   1      32.729 -33.675  -1.107  0.62  6.61           N\
+HETATM 3846  C11 LIG G   1      32.359 -36.905   0.058  0.62  6.64           C\
+HETATM 3847  C12 LIG G   1      32.132 -37.973   0.879  0.62  7.13           C\
+END\
+}

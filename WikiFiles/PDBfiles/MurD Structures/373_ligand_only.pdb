@@ -1,0 +1,43 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 HETATM 3802  C1  LIG D   1      33.780 -51.653 -30.952  0.46 21.91           C\
+HETATM 3803  N1  LIG D   1      33.780 -50.240 -31.309  0.46 17.76           N\
+HETATM 3804  C2  LIG D   1      33.293 -49.425 -30.196  0.46 17.63           C\
+HETATM 3805  C3  LIG D   1      33.299 -47.954 -30.545  0.46 16.43           C\
+HETATM 3806  N2  LIG D   1      32.710 -47.672 -31.846  0.46 15.92           N\
+HETATM 3807  C4  LIG D   1      33.110 -48.556 -32.924  0.46 16.94           C\
+HETATM 3808  C5  LIG D   1      32.946 -49.987 -32.485  0.46 17.90           C\
+HETATM 3809  C6  LIG D   1      32.175 -46.444 -32.008  0.46 13.54           C\
+HETATM 3810  O1  LIG D   1      32.402 -45.573 -31.184  0.46 12.14           O\
+HETATM 3811  N3  LIG D   1      31.393 -46.260 -33.104  0.46 11.10           N\
+HETATM 3812  C7  LIG D   1      31.114 -45.050 -33.769  0.46 11.53           C\
+HETATM 3813  C8  LIG D   1      30.019 -44.962 -34.626  0.46 11.69           C\
+HETATM 3814  C9  LIG D   1      29.731 -43.787 -35.290  0.46 12.02           C\
+HETATM 3815  C10 LIG D   1      30.552 -42.708 -35.060  0.46 10.76           C\
+HETATM 3816  F1  LIG D   1      30.283 -41.566 -35.749  0.46 10.80           F\
+HETATM 3817  C11 LIG D   1      31.642 -42.752 -34.217  0.46 11.14           C\
+HETATM 3818  C12 LIG D   1      31.912 -43.945 -33.540  0.46 10.92           C\
+HETATM 3819  C1  LIG D   3      32.519 -38.335   9.930  0.48 20.02           C\
+HETATM 3820  N1  LIG D   3      32.001 -37.534   8.822  0.48 15.37           N\
+HETATM 3821  C2  LIG D   3      33.017 -36.614   8.327  0.48 15.74           C\
+HETATM 3822  C3  LIG D   3      32.427 -35.729   7.257  0.48 13.51           C\
+HETATM 3823  N2  LIG D   3      31.949 -36.556   6.170  0.48 13.20           N\
+HETATM 3824  C4  LIG D   3      31.024 -37.604   6.577  0.48 16.36           C\
+HETATM 3825  C5  LIG D   3      31.574 -38.413   7.736  0.48 16.96           C\
+HETATM 3826  C6  LIG D   3      32.251 -36.207   4.898  0.48  9.26           C\
+HETATM 3827  O1  LIG D   3      32.925 -35.246   4.684  0.48  7.19           O\
+HETATM 3828  N3  LIG D   3      31.666 -36.954   3.921  0.48  9.27           N\
+HETATM 3829  C7  LIG D   3      31.824 -36.747   2.548  0.48  8.55           C\
+HETATM 3830  C8  LIG D   3      31.772 -35.444   2.082  0.48  8.78           C\
+HETATM 3831  C9  LIG D   3      32.029 -35.179   0.748  0.48 11.09           C\
+HETATM 3832  C10 LIG D   3      32.276 -36.252  -0.072  0.48  9.85           C\
+HETATM 3833  F1  LIG D   3      32.488 -35.998  -1.393  0.48 12.37           F\
+HETATM 3834  C11 LIG D   3      32.308 -37.538   0.351  0.48  9.78           C\
+HETATM 3835  C12 LIG D   3      32.130 -37.803   1.697  0.48  9.48           C\
+END\
+}
