@@ -12,4 +12,6 @@ All OSA molecules can be seen in the [Master List](https://docs.google.com/sprea
 
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSf4UieL5pRQqN5rOL4q-t57qcpJhHG_jqMXV774FPUJBmnBbQ/viewform) to sign up for Open Source Antibiotics newsletters. You can watch all Open Source Antibiotics meetings [here](https://www.youtube.com/playlist?list=PL0eLxnHhou_k1Upbn5X1mdHBwKMYkRpLH).
 
+If you're participating and would like to advertise this fact, or if you like the project and want to promote it, you can use [this resource](https://github.com/opensourceantibiotics/OSA_Tech_Ops/issues/1).
+
 Unless otherwise stated, the licence for this project is CC-BY-4.0.
